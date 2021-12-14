@@ -19,10 +19,8 @@ class Person:
         return "{} ({})" .format(self.getName(),self.getAddress())
 
 class Student(Person):
-    def __init__(self,name,address,courses,grades):
-        super().__init__(self)
-        self.courses=courses
-        self.grades=grades
+    def __init__(self,name,address):
+        super().__init__(self,name,address)
     
     def addCourseGrade(self,courses,grades):
         CourseNames=()
@@ -48,7 +46,7 @@ class Student(Person):
 
 class Teacher(Person):
     def __init__(self,name,address,courses):
-        super().__init__(self)
+        super().__init__(self,name,address)
         self.courses=courses
 
     def addCourse(self,course):
@@ -72,4 +70,4 @@ class Teacher(Person):
     def __str__(self):
         return "{} ({})" .format(self.getName(),self.getAddress())
 
-#here is my solution sir, but i dont know why the super() does not work, i also tried writing the name of the main class also
+
